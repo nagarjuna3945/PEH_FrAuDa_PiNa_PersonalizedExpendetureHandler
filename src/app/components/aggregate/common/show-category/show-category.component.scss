@@ -1,0 +1,65 @@
+.show-category-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+
+  .mat-elevation-z8 {
+    padding-top: 1rem;
+  }
+
+  .month-info-wrap {
+    height: 3.2rem;
+    padding: 0.2rem 0.7rem 0.5rem 1rem;
+
+    .month-info-form {
+      float: left;
+      width: 35%;
+      text-align: center;
+    }
+
+    .total-amount {
+      float: right;
+      width: 60%;
+      padding: 1.2rem 0;
+      text-align: right;
+
+      label {
+        background-color: #148ba8;
+        color: #ffffff;
+        padding: 0.4rem 1rem;
+        border-radius: 20px;
+        font-weight: bold;
+        letter-spacing: 0.8px;
+      }
+    }
+
+    .search-month {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #505050;
+    }
+  }
+
+  #show-category-sum-wrap {
+    padding: 2rem;
+  }
+
+  .mat-progress-bar.mat-primary {
+    height: 10px;
+    border-radius: 20px;
+  }
+
+  .category-sum {
+    float: right;
+  }
+
+  .category-row {
+    padding: 0 1rem;
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+
+    .category-name-line {
+      margin-bottom: 0.5rem;
+    }
+  }
+}

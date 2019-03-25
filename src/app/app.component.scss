@@ -1,0 +1,40 @@
+.example-fill-remaining-space {
+  /* This fills the remaining space, by using flexbox.
+     Every toolbar row uses a flexbox row layout. */
+  flex: 1 1 auto;
+}
+
+.mat-menu-item .mat-icon {
+  margin-right: 5px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  box-shadow: 5px 10px 1px rgba(0, 0, 0, 0.14), 10px 0px 15px 5px rgba(0, 0, 0, 0.12);
+  height: 52px;
+
+  .menu-tab-btn {
+    width: 33%;
+    text-align: center;
+    color: #ffffff;
+
+    .mat-icon {
+      width: 100%;
+      font-size: 2rem;
+    }
+
+    label {
+      width: 100%;
+      font-size: 0.5rem;
+      font-weight: lighter;
+      float: left;
+      height: 15px;
+      line-height: 15px;
+      margin-top: -10px;
+    }
+  }
+}

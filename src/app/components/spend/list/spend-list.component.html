@@ -1,0 +1,53 @@
+<mat-tab-group
+  [selectedIndex]="selectedTab"
+  (selectedIndexChange)="tabChanged($event)"
+  backgroundColor="primary"
+>
+  <mat-tab *ngFor="let tab of tabs; let index = index">
+    <ng-template mat-tab-label>
+      <mat-icon>{{tab.icon}}</mat-icon>　{{tab.label}}
+    </ng-template>
+    <div class="spend-list-container">
+
+      <div class="month-info-wrap">
+        <mat-form-field class="month-info-form">
+          <input
+            matInput
+            [matDatepicker]="month"
+            [formControl]="searchMonth"
+            (click)="month.open()"
+            class="search-month"
+            readonly
+          />
+          <mat-datepicker-toggle matSuffix [for]="month"></mat-datepicker-toggle>
+          <mat-datepicker
+            #month
+            touchUi
+            startView="year"
+            (monthSelected)="chosenMonthHandler($event, month)"
+          ></mat-datepicker>
+        </mat-form-field>
+        <div class="total-amount">
+          <label> Total： {{ totalAmount | number }} </label>
+        </div>
+      </div>
+
+      <div class="mat-elevation-z8">
+        <ng-container *ngIf="storeObj.isPublic; else privateTableTemplate">
+          <app-spend-table
+            *ngIf="spendPublicList"
+            [spendList]="spendPublicList"
+            (openBottomSheetEvent)="openBottomSheet($event)"
+          ></app-spend-table>
+        </ng-container>
+        <ng-template #privateTableTemplate>
+          <app-spend-table
+            *ngIf="spendPrivateList"
+            [spendList]="spendPrivateList"
+            (openBottomSheetEvent)="openBottomSheet($event)"
+          ></app-spend-table>
+        </ng-template>
+      </div>
+    </div>
+  </mat-tab>
+</mat-tab-group>

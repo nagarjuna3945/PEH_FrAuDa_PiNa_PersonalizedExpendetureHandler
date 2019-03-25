@@ -1,0 +1,53 @@
+import { Category } from '../model/category';
+
+// Public Cost
+const PUBLIC_CATEGORY_FOOD              = 10;
+const PUBLIC_CATEGORY_DAILY_NECESSITIES = 11;
+const PUBLIC_CATEGORY_RELATIINSHIP      = 12;
+const PUBLIC_CATEGORY_TRAVEL            = 13;
+const PUBLIC_CATEGORY_HOUSE             = 14;
+const PUBLIC_CATEGORY_DINE_OUT          = 15;
+const PUBLIC_CATEGORY_HOBBY             = 16;
+const PUBLIC_CATEGORY_ETC               = 19;
+
+// Private Cost
+const PRIVATE_CATEGORY_FOOD         = 20;
+const PRIVATE_CATEGORY_RELATIINSHIP = 21;
+const PRIVATE_CATEGORY_BEAUTY       = 22;
+const PRIVATE_CATEGORY_ETC          = 29;
+
+export const PUBLIC_CATEGORY_LIST = {
+  [PUBLIC_CATEGORY_FOOD]: 'Food expenses ',
+  [PUBLIC_CATEGORY_DAILY_NECESSITIES]: 'Daily necessities  ',
+  [PUBLIC_CATEGORY_RELATIINSHIP]: 'Companionship',
+  [PUBLIC_CATEGORY_TRAVEL]: 'Travel  ',
+  [PUBLIC_CATEGORY_HOUSE]: 'House  ',
+  [PUBLIC_CATEGORY_DINE_OUT]: 'Eating out  ',
+  [PUBLIC_CATEGORY_HOBBY]: 'Books and hobbies  ',
+  [PUBLIC_CATEGORY_ETC]: 'Other'
+};
+
+export const PRIVATE_CATEGORY_LIST = {
+  [PRIVATE_CATEGORY_FOOD]: 'Food expenses  ',
+  [PRIVATE_CATEGORY_RELATIINSHIP]: 'Companionship',
+  [PRIVATE_CATEGORY_BEAUTY]: 'Clothing, beauty  ',
+  [PRIVATE_CATEGORY_ETC]: 'Other  '
+};
+
+export const publicCategory: Category[] = [
+  { value: PUBLIC_CATEGORY_FOOD,              viewValue: PUBLIC_CATEGORY_LIST[PUBLIC_CATEGORY_FOOD] },
+  { value: PUBLIC_CATEGORY_DAILY_NECESSITIES, viewValue: PUBLIC_CATEGORY_LIST[PUBLIC_CATEGORY_DAILY_NECESSITIES] },
+  { value: PUBLIC_CATEGORY_DINE_OUT,          viewValue: PUBLIC_CATEGORY_LIST[PUBLIC_CATEGORY_DINE_OUT] },
+  { value: PUBLIC_CATEGORY_RELATIINSHIP,      viewValue: PUBLIC_CATEGORY_LIST[PUBLIC_CATEGORY_RELATIINSHIP] },
+  { value: PUBLIC_CATEGORY_HOBBY,             viewValue: PUBLIC_CATEGORY_LIST[PUBLIC_CATEGORY_HOBBY] },
+  { value: PUBLIC_CATEGORY_HOUSE,             viewValue: PUBLIC_CATEGORY_LIST[PUBLIC_CATEGORY_HOUSE] },
+  { value: PUBLIC_CATEGORY_TRAVEL,            viewValue: PUBLIC_CATEGORY_LIST[PUBLIC_CATEGORY_TRAVEL] },
+  { value: PUBLIC_CATEGORY_ETC,               viewValue: PUBLIC_CATEGORY_LIST[PUBLIC_CATEGORY_ETC] },
+];
+
+export const privateCategory: Category[] = [
+  { value: PRIVATE_CATEGORY_FOOD,         viewValue: PRIVATE_CATEGORY_LIST[PRIVATE_CATEGORY_FOOD] },
+  { value: PRIVATE_CATEGORY_RELATIINSHIP, viewValue: PRIVATE_CATEGORY_LIST[PRIVATE_CATEGORY_RELATIINSHIP] },
+  { value: PRIVATE_CATEGORY_BEAUTY,       viewValue: PRIVATE_CATEGORY_LIST[PRIVATE_CATEGORY_BEAUTY] },
+  { value: PRIVATE_CATEGORY_ETC,          viewValue: PRIVATE_CATEGORY_LIST[PRIVATE_CATEGORY_ETC] },
+];

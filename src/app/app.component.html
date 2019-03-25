@@ -1,0 +1,62 @@
+<mat-toolbar color="primary">
+  <span class="example-fill-remaining-space"> Personalized Expense Handler </span>
+  <span *ngIf="authService.uid">
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon> menu </mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item [routerLink]="['/spend']">
+        <mat-icon> attach_money </mat-icon> input
+      </button>
+      <button mat-menu-item [routerLink]="['/spend-list']">
+        <mat-icon> show_chart </mat-icon> History
+      </button>
+      <button mat-menu-item [routerLink]="['/aggregate']">
+        <mat-icon> equalizer </mat-icon> Aggregate
+      </button>
+      <button mat-menu-item [matMenuTriggerFor]="systemSettings">
+        <mat-icon> settings </mat-icon> Configuration
+      </button>
+      <button mat-menu-item (click)="logout()">
+        <mat-icon> subdirectory_arrow_right </mat-icon> Logout
+      </button>
+    </mat-menu>
+
+    <mat-menu #systemSettings="matMenu">
+      <button mat-menu-item>
+        <mat-icon> loop </mat-icon> Fixed expenditure management (in preparation)
+
+      </button>
+    </mat-menu>
+  </span>
+</mat-toolbar>
+<main>
+  <router-outlet></router-outlet>
+</main>
+<mat-toolbar
+  color="primary"
+  class="footer"
+>
+  <div
+    class="menu-tab-btn"
+    [routerLink]="['/spend']"
+  >
+    <mat-icon> attach_money </mat-icon>
+    <label> input </label>
+  </div>
+  <div
+    class="menu-tab-btn"
+    [routerLink]="['/spend-list']"
+  >
+    <mat-icon> show_chart </mat-icon>
+    <label> History </label>
+  </div>
+  <div
+    class="menu-tab-btn"
+    [routerLink]="['/aggregate']"
+  >
+    <mat-icon> equalizer </mat-icon>
+    <label> Aggregate
+    </label>
+  </div>
+</mat-toolbar>

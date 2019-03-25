@@ -1,0 +1,22 @@
+.login-container {
+  padding: 2rem 2rem;
+
+  .header {
+    margin-top: 5rem;
+  }
+
+  .password-field {
+    margin-top: -20px;
+  }
+
+  .login-btn {
+    width: 12rem;
+    height: 2.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+}
+
+mat-form-field {
+  width: 100%;
+}

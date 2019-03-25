@@ -1,0 +1,47 @@
+.mat-dialog-content {
+  padding: 0;
+}
+
+.mat-dialog-title {
+  margin: 0 0 5px 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+.mat-dialog-container {
+  padding-top: 0;
+}
+
+table {
+  width: 100%;
+}
+
+.create-date-header {
+  width: 4rem;
+}
+
+.create-date-cell {
+  padding: 0 0.9rem !important;
+}
+
+.create-label {
+  border-radius: 20px;
+  padding: 0.3rem 0.7rem;
+  background-color: lightcoral;
+  color: #ffffff;
+}
+
+.amount-cell {
+  padding: 0.5rem 0;
+}
+
+.amount {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.memo {
+  font-size: 0.8rem;
+  margin-top: 5px;
+  color: #555555;
+}

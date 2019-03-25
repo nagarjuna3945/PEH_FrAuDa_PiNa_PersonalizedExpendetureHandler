@@ -1,0 +1,25 @@
+.spend-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0.8rem 1rem;
+
+  mat-form-field {
+    width: 100%;
+  }
+
+  // Category Radio Button
+  .radio-group {
+    display: inline-flex;
+    flex-direction: column;
+  }
+
+  .radio-button {
+    margin: 10px;
+  }
+
+  .add-btn {
+    float: right;
+    width: 7rem;
+    font-weight: bold;
+  }
+}

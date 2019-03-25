@@ -1,0 +1,103 @@
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+.mat-form-field {
+  float: right;
+  width: 35vw;
+  margin-bottom: -10px;
+  margin-right: 1rem;
+  font-size: 13px;
+
+  .mat-icon.material-icons {
+    font-size: 110%;
+  }
+  .mat-form-field-infix {
+    padding: 0.7rem 0;
+  }
+}
+
+.month-info-wrap {
+  height: 3.2rem;
+  padding: 0.2rem 0.7rem 0.5rem 1rem;
+
+  .month-info-form {
+    float: left;
+    width: 35%;
+    text-align: center;
+  }
+
+  .total-amount {
+    float: right;
+    width: 60%;
+    padding: 1rem 0;
+    text-align: right;
+
+    label {
+      background-color: #148ba8;
+      color: #ffffff;
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+      font-weight: bold;
+      letter-spacing: 0.8px;
+    }
+  }
+
+  .search-month {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #505050;
+  }
+}
+
+.action-cell {
+  .mat-icon {
+    color: #148ba8;
+  }
+}
+
+// Tabel header
+.create-date-header {
+  width: 3.5rem;
+}
+.category-header {
+  width: 4.9rem;
+}
+
+// Tabel cell
+.create-date-cell {
+  padding: 0 0.7rem !important;
+}
+.category-cell {
+  padding: 0 0.2rem;
+}
+.amount-cell {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+// 日付ラベル
+.create-label {
+  border-radius: 20px;
+  padding: 0.3rem 0.7rem;
+  background-color: #85c3c2;
+  color: #ffffff;
+}
+
+// 金額
+.amount {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+// メモ
+.memo {
+  font-size: 0.7rem;
+  margin-top: 5px;
+  color: #555555;
+}

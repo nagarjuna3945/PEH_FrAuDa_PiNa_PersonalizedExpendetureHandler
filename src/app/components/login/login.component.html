@@ -1,0 +1,54 @@
+<div class="login-container">
+  <mat-card-header class="center header">
+    <mat-card-title>
+      <h1> Login to Donn </h1>
+    </mat-card-title>
+  </mat-card-header>
+
+  <form [formGroup]="loginForm">
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label><mat-icon>person</mat-icon> mail address
+        </mat-label>
+        <input
+          type="email"
+          formControlName="email"
+          class="form-control"
+          matInput
+        />
+        <mat-error *ngIf="loginForm.get('email').hasError('required')">
+          Please enter your e-mail address
+
+        </mat-error>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field
+        appearance="outline"
+        class="password-field"
+      >
+        <mat-label><mat-icon>lock</mat-icon> password </mat-label>
+        <input
+          type="password"
+          formControlName="password"
+          class="form-control"
+          matInput
+        />
+        <mat-error *ngIf="loginForm.get('password').hasError('required')">
+          Please enter your password
+
+        </mat-error>
+      </mat-form-field>
+      <label class="error"> {{errorMessage}} </label>
+    </p>
+    <p class="center">
+      <button
+        type="submit"
+        (click)="login(loginForm.value)"
+        class="btn btn-default login-btn"
+        mat-raised-button color="primary"
+        [disabled]="loginForm.invalid"
+      > Login </button>
+    </p>
+  </form>
+</div>

@@ -1,0 +1,113 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+$candy-app-primary: mat-palette($mat-cyan, 600);
+$candy-app-accent:  mat-palette($mat-blue-grey);
+$candy-app-warn:    mat-palette($mat-deep-orange);
+$candy-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-app-warn);
+@include angular-material-theme($candy-app-theme);
+
+body {
+  margin: 0 auto;
+  background-color: #ffffff;
+  font-family: 'Open Sans', 'Hiragino Kaku Gothic ProN', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
+
+  main {
+    height: 100vh;
+  }
+
+  .mat-toolbar.mat-primary,
+  .mat-tab-list {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background: rgb(241,128,135);
+    background: linear-gradient(90deg, rgba(241,128,135,1) 50%, rgba(244,164,154,1) 100%);
+    font-weight: bold;
+  }
+
+  .mat-tab-header {
+    position: sticky;
+    top: 55px;
+    z-index: 999;
+  }
+
+  .mat-step-header .mat-step-icon,
+  .mat-raised-button.mat-primary {
+    background-color: #85c3c2;
+  }
+
+  .mat-tab-group.mat-primary.mat-background-primary .mat-ink-bar {
+    display: none;
+  }
+
+  .mat-tab-group.mat-background-primary .mat-tab-label {
+    color: black;
+  }
+
+  .mat-elevation-z8 {
+    border-radius: 10px;
+    padding-bottom: 10px;
+  }
+
+  .mat-progress-bar-buffer {
+    background-color: #d9eef1;
+  }
+  .mat-progress-bar-fill::after {
+    background-color: #85c3c2;
+  }
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.textAlignRight {
+  text-align: right !important;
+}
+
+.borderRadius {
+  border-radius: 10px;
+}
+
+.error{
+  color: red;
+}
+
+.w-50 {
+  width: 50% !important;
+}
+
+.float-left {
+  float: left !important;
+}
+
+h1, h2 {
+  color: #555555;
+}
+
+.mat-tab-body-wrapper {
+  min-height: 100vh;
+}
+
+.mat-tab-labels .mat-tab-label {
+  width: 50% !important;
+  opacity: .2;
+}
+
+.mat-tab-label-active {
+  color: #ffffff !important;
+  opacity: 1 !important;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.mat-warn {
+  background-color: #e46679 !important;
+}
+
+.mat-bottom-sheet-container {
+  background-color: rgba( 255, 255, 255, 0.5 );
+}
